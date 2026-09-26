@@ -204,6 +204,127 @@
             font-weight: 500;
         }
 
+        /* =========================
+   HERO PHOTO STICKERS
+========================== */
+
+.photo-sticker {
+    position: absolute;
+    z-index: 4;
+    height: auto;
+
+    filter: drop-shadow(0 12px 20px rgba(75, 55, 40, 0.15));
+
+    transform-origin: center;
+
+    pointer-events: none;
+}
+
+
+/* Sitting photo - lower left */
+.sticker-left {
+    width: 175px;
+
+    left: 6%;
+    bottom: 8%;
+
+    animation: swayLeft 5s ease-in-out infinite;
+}
+
+
+/* Red blazer photo - upper right */
+.sticker-right {
+    width: 195px;
+
+    right: 6%;
+    top: 17%;
+
+    animation: swayRight 6s ease-in-out infinite;
+}
+
+
+/* Grad photo - lower right */
+.sticker-bottom {
+    width: 160px;
+
+    right: 18%;
+    bottom: 5%;
+
+    animation: swayBottom 5.5s ease-in-out infinite;
+}
+
+
+/* =========================
+   STICKER ANIMATIONS
+========================== */
+
+@keyframes swayLeft {
+    0% {
+        transform: translateX(0) translateY(0) rotate(-7deg);
+    }
+
+    25% {
+        transform: translateX(12px) translateY(-5px) rotate(3deg);
+    }
+
+    50% {
+        transform: translateX(0) translateY(2px) rotate(8deg);
+    }
+
+    75% {
+        transform: translateX(-10px) translateY(-3px) rotate(-2deg);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0) rotate(-7deg);
+    }
+}
+
+
+@keyframes swayRight {
+    0% {
+        transform: translateX(0) translateY(0) rotate(7deg);
+    }
+
+    25% {
+        transform: translateX(-12px) translateY(4px) rotate(-4deg);
+    }
+
+    50% {
+        transform: translateX(0) translateY(-5px) rotate(-9deg);
+    }
+
+    75% {
+        transform: translateX(10px) translateY(2px) rotate(3deg);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0) rotate(7deg);
+    }
+}
+
+
+@keyframes swayBottom {
+    0% {
+        transform: translateX(0) translateY(0) rotate(-4deg);
+    }
+
+    25% {
+        transform: translateX(-10px) translateY(-7px) rotate(5deg);
+    }
+
+    50% {
+        transform: translateX(7px) translateY(0) rotate(9deg);
+    }
+
+    75% {
+        transform: translateX(-4px) translateY(-5px) rotate(-6deg);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0) rotate(-4deg);
+    }
+}
 
         /* =========================
            BUTTONS
