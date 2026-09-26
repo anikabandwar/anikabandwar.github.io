@@ -14,7 +14,6 @@
 
 
     <!-- GOOGLE FONTS -->
-
     <link
         rel="preconnect"
         href="https://fonts.googleapis.com"
@@ -34,33 +33,21 @@
 
     <style>
 
-
         /* ==================================================
            COLOR PALETTE
         ================================================== */
 
         :root {
-
             --cream: #faf6f0;
-
             --beige: #eee4d7;
-
             --blush: #f3dadd;
-
             --soft-pink: #f7e9e8;
-
             --gold: #b8955b;
-
             --dark-gold: #8f6f3d;
-
             --brown: #40372f;
-
             --light-brown: #756a61;
-
             --white: #fffdf9;
-
         }
-
 
 
         /* ==================================================
@@ -68,29 +55,19 @@
         ================================================== */
 
         * {
-
             box-sizing: border-box;
-
             margin: 0;
-
             padding: 0;
-
         }
-
 
         html {
-
             scroll-behavior: smooth;
-
         }
 
-
         body {
-
             font-family: "DM Sans", sans-serif;
 
             background:
-
                 radial-gradient(
                     circle at 10% 10%,
                     #f8e2e4 0%,
@@ -106,20 +83,13 @@
                 var(--cream);
 
             color: var(--brown);
-
             overflow-x: hidden;
-
         }
-
 
         a {
-
             text-decoration: none;
-
             color: inherit;
-
         }
-
 
 
         /* ==================================================
@@ -127,29 +97,26 @@
         ================================================== */
 
         .cursor-glow {
-
             width: 350px;
-
             height: 350px;
-
             border-radius: 50%;
 
-            background: rgba(236, 196, 198, 0.18);
+            background:
+                rgba(236, 196, 198, 0.18);
 
             position: fixed;
 
             pointer-events: none;
 
-            transform: translate(-50%, -50%);
+            transform:
+                translate(-50%, -50%);
 
             filter: blur(50px);
 
             z-index: -1;
 
             transition: 0.08s;
-
         }
-
 
 
         /* ==================================================
@@ -157,63 +124,46 @@
         ================================================== */
 
         nav {
-
             position: fixed;
-
             top: 0;
-
             width: 100%;
 
             z-index: 1000;
 
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
 
             padding: 20px 7%;
 
-            background: rgba(250, 246, 240, 0.78);
+            background:
+                rgba(250, 246, 240, 0.78);
 
             backdrop-filter: blur(15px);
-
             -webkit-backdrop-filter: blur(15px);
 
             border-bottom:
-
-                1px solid rgba(184, 149, 91, 0.15);
-
+                1px solid
+                rgba(184, 149, 91, 0.15);
         }
 
-
         .logo {
-
             font-family:
-
                 "Playfair Display",
                 serif;
 
             font-size: 1.4rem;
-
             font-style: italic;
-
         }
 
-
         .nav-links {
-
             display: flex;
-
             gap: 32px;
 
             list-style: none;
-
         }
 
-
         .nav-links a {
-
             font-size: 0.88rem;
 
             letter-spacing: 1px;
@@ -221,37 +171,29 @@
             text-transform: uppercase;
 
             position: relative;
-
         }
 
-
         .nav-links a::after {
-
             content: "";
 
             position: absolute;
 
             left: 0;
-
             bottom: -6px;
 
             width: 0%;
-
             height: 1px;
 
-            background: var(--gold);
+            background:
+                var(--gold);
 
-            transition: width 0.3s ease;
-
+            transition:
+                width 0.3s ease;
         }
-
 
         .nav-links a:hover::after {
-
             width: 100%;
-
         }
-
 
 
         /* ==================================================
@@ -259,41 +201,34 @@
         ================================================== */
 
         .hero {
-
             min-height: 100vh;
 
             display: flex;
 
             justify-content: center;
-
             align-items: center;
 
             text-align: center;
 
-            padding: 120px 8% 80px;
+            padding:
+                120px 8% 80px;
 
             position: relative;
 
             overflow: hidden;
 
             isolation: isolate;
-
         }
 
-
         .hero-content {
-
             max-width: 850px;
 
             z-index: 10;
 
             position: relative;
-
         }
 
-
         .eyebrow {
-
             text-transform: uppercase;
 
             letter-spacing: 4px;
@@ -303,19 +238,14 @@
             color: var(--dark-gold);
 
             margin-bottom: 25px;
-
         }
 
-
         .hero h1 {
-
             font-family:
-
                 "Playfair Display",
                 serif;
 
             font-size:
-
                 clamp(4rem, 9vw, 8rem);
 
             line-height: 0.9;
@@ -325,23 +255,17 @@
             letter-spacing: -4px;
 
             margin-bottom: 30px;
-
         }
 
-
         .hero h1 span {
-
             display: block;
 
             font-style: italic;
 
             color: var(--gold);
-
         }
 
-
         .hero-statement {
-
             max-width: 660px;
 
             margin: auto;
@@ -351,18 +275,13 @@
             line-height: 1.8;
 
             color: var(--light-brown);
-
         }
 
-
         .hero-statement strong {
-
             color: var(--brown);
 
             font-weight: 500;
-
         }
-
 
 
         /* ==================================================
@@ -370,7 +289,6 @@
         ================================================== */
 
         .photo-sticker {
-
             position: absolute;
 
             height: auto;
@@ -381,269 +299,208 @@
 
             user-select: none;
 
-            transform-origin: center center;
+            transform-origin:
+                center center;
 
             filter:
-
                 drop-shadow(
                     0 16px 30px
                     rgba(75, 55, 40, 0.15)
                 );
-
         }
 
 
+        /* GRAD PHOTO - TOP LEFT */
 
-        /* sitting photo */
+        .sticker-top-left {
+            width: 170px;
 
-        .sticker-left {
-
-            width: 190px;
-
-            left: 4%;
-
-            bottom: 7%;
-
-            animation:
-
-                swayLeft
-                5.2s
-                ease-in-out
-                infinite;
-
-        }
-
-
-
-        /* red blazer */
-
-        .sticker-right {
-
-            width: 215px;
-
-            right: 4%;
+            left: 8%;
 
             top: 17%;
 
             animation:
+                swayTopLeft
+                5.8s
+                ease-in-out
+                infinite;
+        }
 
+
+        /* RED BLAZER - TOP RIGHT */
+
+        .sticker-right {
+            width: 215px;
+
+            right: 6%;
+
+            top: 17%;
+
+            animation:
                 swayRight
                 6.1s
                 ease-in-out
                 infinite;
-
         }
 
 
+        /* SITTING PHOTO - BOTTOM LEFT */
 
-        /* graduation */
+        .sticker-left {
+            width: 235px;
 
-        .sticker-bottom {
+            left: 6%;
 
-            width: 165px;
-
-            right: 18%;
-
-            bottom: 4%;
+            bottom: 5%;
 
             animation:
-
-                swayBottom
-                5.7s
+                swayLeft
+                5.2s
                 ease-in-out
                 infinite;
-
         }
-
 
 
         /* ==================================================
-           STICKER MOVEMENT
+           STICKER ANIMATIONS
         ================================================== */
 
-        @keyframes swayLeft {
+        @keyframes swayTopLeft {
 
             0% {
-
                 transform:
                     translateX(0)
                     translateY(0)
-                    rotate(-8deg);
-
+                    rotate(-6deg);
             }
-
 
             20% {
-
                 transform:
-                    translateX(10px)
-                    translateY(-5px)
-                    rotate(-2deg);
-
+                    translateX(8px)
+                    translateY(-4px)
+                    rotate(1deg);
             }
-
 
             40% {
-
                 transform:
-                    translateX(18px)
+                    translateX(14px)
                     translateY(-2px)
                     rotate(7deg);
-
             }
-
 
             60% {
-
                 transform:
-                    translateX(5px)
-                    translateY(4px)
+                    translateX(6px)
+                    translateY(3px)
                     rotate(2deg);
-
             }
-
 
             80% {
-
                 transform:
-                    translateX(-8px)
+                    translateX(-5px)
                     translateY(-2px)
-                    rotate(-6deg);
-
+                    rotate(-5deg);
             }
 
-
             100% {
-
                 transform:
                     translateX(0)
                     translateY(0)
-                    rotate(-8deg);
-
+                    rotate(-6deg);
             }
-
         }
-
 
 
         @keyframes swayRight {
 
             0% {
-
                 transform:
                     translateX(0)
                     translateY(0)
                     rotate(7deg);
-
             }
 
-
             20% {
-
                 transform:
                     translateX(-10px)
                     translateY(4px)
                     rotate(2deg);
-
             }
 
-
             40% {
-
                 transform:
                     translateX(-18px)
                     translateY(-5px)
                     rotate(-8deg);
-
             }
 
-
             60% {
-
                 transform:
                     translateX(-5px)
                     translateY(2px)
                     rotate(-2deg);
-
             }
 
-
             80% {
-
                 transform:
                     translateX(8px)
                     translateY(-3px)
                     rotate(6deg);
-
             }
 
-
             100% {
-
                 transform:
                     translateX(0)
                     translateY(0)
                     rotate(7deg);
-
             }
-
         }
 
 
-
-        @keyframes swayBottom {
+        @keyframes swayLeft {
 
             0% {
-
                 transform:
                     translateX(0)
                     translateY(0)
-                    rotate(-5deg);
-
+                    rotate(-8deg);
             }
 
-
-            25% {
-
+            20% {
                 transform:
-                    translateX(-10px)
-                    translateY(-8px)
-                    rotate(5deg);
-
+                    translateX(10px)
+                    translateY(-5px)
+                    rotate(-2deg);
             }
 
-
-            50% {
-
+            40% {
                 transform:
-                    translateX(8px)
-                    translateY(-3px)
-                    rotate(9deg);
-
+                    translateX(18px)
+                    translateY(-2px)
+                    rotate(7deg);
             }
 
-
-            75% {
-
+            60% {
                 transform:
-                    translateX(-5px)
+                    translateX(5px)
                     translateY(4px)
-                    rotate(-7deg);
-
+                    rotate(2deg);
             }
 
+            80% {
+                transform:
+                    translateX(-8px)
+                    translateY(-2px)
+                    rotate(-6deg);
+            }
 
             100% {
-
                 transform:
                     translateX(0)
                     translateY(0)
-                    rotate(-5deg);
-
+                    rotate(-8deg);
             }
-
         }
-
 
 
         /* ==================================================
@@ -651,7 +508,6 @@
         ================================================== */
 
         .hero-buttons {
-
             margin-top: 40px;
 
             display: flex;
@@ -661,15 +517,13 @@
             gap: 15px;
 
             flex-wrap: wrap;
-
         }
 
-
         .button {
-
             display: inline-block;
 
-            padding: 14px 28px;
+            padding:
+                14px 28px;
 
             border-radius: 50px;
 
@@ -678,51 +532,42 @@
             letter-spacing: 1px;
 
             transition:
-
                 transform 0.3s ease,
                 background 0.3s ease,
                 border-color 0.3s ease;
-
         }
 
-
         .primary-button {
-
-            background: var(--brown);
+            background:
+                var(--brown);
 
             color: white;
 
             border:
-
                 1px solid
                 var(--brown);
-
         }
 
-
         .primary-button:hover {
+            background:
+                var(--gold);
 
-            background: var(--gold);
-
-            border-color: var(--gold);
+            border-color:
+                var(--gold);
 
             transform:
                 translateY(-3px);
-
         }
 
-
         .secondary-button {
-
             border:
-
                 1px solid
                 var(--gold);
 
-            color: var(--dark-gold);
+            color:
+                var(--dark-gold);
 
             background:
-
                 rgba(
                     255,
                     253,
@@ -730,20 +575,17 @@
                     0.45
                 );
 
-            backdrop-filter: blur(8px);
-
+            backdrop-filter:
+                blur(8px);
         }
 
-
         .secondary-button:hover {
-
-            background: var(--soft-pink);
+            background:
+                var(--soft-pink);
 
             transform:
                 translateY(-3px);
-
         }
-
 
 
         /* ==================================================
@@ -751,63 +593,69 @@
         ================================================== */
 
         .flower {
-
             position: absolute;
 
-            font-family: Georgia, serif;
+            font-family:
+                Georgia,
+                serif;
 
-            color: #ddb6b9;
-
-            opacity: 0.28;
-
-            animation:
-
-                flowerFloat
-                6s
-                ease-in-out
-                infinite;
+            color:
+                #ddb6b9;
 
             user-select: none;
 
             z-index: 1;
 
+            animation:
+                flowerFloat
+                6s
+                ease-in-out
+                infinite;
         }
 
+
+        /* SMALL LEFT ACCENT */
 
         .flower-one {
+            font-size: 7rem;
 
-            font-size: 9rem;
+            left: -25px;
 
-            left: -30px;
+            top: 12%;
 
-            top: 15%;
-
+            opacity: 0.14;
         }
 
+
+        /* MAIN BOTTOM RIGHT FLOWER */
 
         .flower-two {
+            font-size: 8rem;
 
-            font-size: 6rem;
+            right: 2.5%;
 
-            right: 1%;
+            bottom: 5%;
 
-            bottom: 8%;
+            opacity: 0.18;
 
-            animation-delay: 1.5s;
-
+            animation-delay:
+                1.2s;
         }
 
 
-        .flower-three {
+        /* SMALL TOP RIGHT FLOWER */
 
-            font-size: 3rem;
+        .flower-three {
+            font-size: 2.6rem;
 
             right: 15%;
 
-            top: 17%;
+            top: 14%;
 
-            animation-delay: 3s;
+            opacity: 0.18;
 
+            animation-delay:
+                2.5s;
         }
 
 
@@ -815,24 +663,17 @@
 
             0%,
             100% {
-
                 transform:
                     translateY(0)
                     rotate(-5deg);
-
             }
 
-
             50% {
-
                 transform:
                     translateY(-18px)
                     rotate(5deg);
-
             }
-
         }
-
 
 
         /* ==================================================
@@ -840,7 +681,6 @@
         ================================================== */
 
         .scroll-indicator {
-
             position: absolute;
 
             bottom: 20px;
@@ -856,15 +696,13 @@
 
             text-transform: uppercase;
 
-            color: var(--light-brown);
+            color:
+                var(--light-brown);
 
             z-index: 10;
-
         }
 
-
         .scroll-indicator::after {
-
             content: "";
 
             width: 1px;
@@ -873,55 +711,44 @@
 
             display: block;
 
-            background: var(--gold);
+            background:
+                var(--gold);
 
-            margin: 9px auto 0;
+            margin:
+                9px auto 0;
 
             animation:
-
                 scrollLine
                 1.7s
                 infinite;
-
         }
-
 
         @keyframes scrollLine {
 
             0% {
-
                 transform:
                     scaleY(0);
 
                 transform-origin:
                     top;
-
             }
 
-
             50% {
-
                 transform:
                     scaleY(1);
 
                 transform-origin:
                     top;
-
             }
 
-
             100% {
-
                 transform:
                     scaleY(0);
 
                 transform-origin:
                     bottom;
-
             }
-
         }
-
 
 
         /* ==================================================
@@ -929,37 +756,29 @@
         ================================================== */
 
         section:not(.hero) {
-
             padding:
                 100px 8%;
-
         }
 
-
         .section-label {
-
             font-size: 0.7rem;
 
             text-transform: uppercase;
 
             letter-spacing: 4px;
 
-            color: var(--gold);
+            color:
+                var(--gold);
 
             margin-bottom: 15px;
-
         }
 
-
         .section-title {
-
             font-family:
-
                 "Playfair Display",
                 serif;
 
             font-size:
-
                 clamp(
                     2.5rem,
                     5vw,
@@ -969,18 +788,14 @@
             font-weight: 500;
 
             margin-bottom: 50px;
-
         }
-
 
         .section-title em {
-
-            color: var(--gold);
+            color:
+                var(--gold);
 
             font-weight: 500;
-
         }
-
 
 
         /* ==================================================
@@ -988,11 +803,9 @@
         ================================================== */
 
         .about {
-
             display: grid;
 
             grid-template-columns:
-
                 1fr 1fr;
 
             gap: 80px;
@@ -1002,16 +815,12 @@
             max-width: 1200px;
 
             margin: auto;
-
         }
 
-
         .about-card {
-
             padding: 50px;
 
             background:
-
                 rgba(
                     255,
                     253,
@@ -1020,7 +829,6 @@
                 );
 
             border:
-
                 1px solid
                 rgba(
                     184,
@@ -1030,14 +838,12 @@
                 );
 
             border-radius:
-
                 100px
                 20px
                 100px
                 20px;
 
             box-shadow:
-
                 0 20px 60px
                 rgba(
                     74,
@@ -1048,51 +854,37 @@
 
             transition:
                 transform 0.4s ease;
-
         }
 
-
         .about-card:hover {
-
             transform:
                 rotate(-1deg)
                 translateY(-5px);
-
         }
 
-
         .about-card h3 {
-
             font-family:
-
                 "Playfair Display",
                 serif;
 
             font-size: 2rem;
 
             margin-bottom: 20px;
-
         }
-
 
         .about-card p {
-
             line-height: 1.9;
 
-            color: var(--light-brown);
-
+            color:
+                var(--light-brown);
         }
 
-
         .big-quote {
-
             font-family:
-
                 "Playfair Display",
                 serif;
 
             font-size:
-
                 clamp(
                     2rem,
                     4vw,
@@ -1102,16 +894,12 @@
             line-height: 1.35;
 
             font-style: italic;
-
         }
-
 
         .big-quote span {
-
-            color: var(--gold);
-
+            color:
+                var(--gold);
         }
-
 
 
         /* ==================================================
@@ -1119,20 +907,15 @@
         ================================================== */
 
         .skills-section {
-
             max-width: 1200px;
 
             margin: auto;
-
         }
 
-
         .skills-grid {
-
             display: grid;
 
             grid-template-columns:
-
                 repeat(
                     auto-fit,
                     minmax(
@@ -1142,14 +925,10 @@
                 );
 
             gap: 18px;
-
         }
 
-
         .skill-card {
-
             background:
-
                 rgba(
                     255,
                     253,
@@ -1161,7 +940,6 @@
                 28px 24px;
 
             border:
-
                 1px solid
                 rgba(
                     184,
@@ -1177,16 +955,12 @@
             overflow: hidden;
 
             transition:
-
                 transform 0.3s ease,
                 border 0.3s ease,
                 box-shadow 0.3s ease;
-
         }
 
-
         .skill-card:hover {
-
             transform:
                 translateY(-8px);
 
@@ -1194,7 +968,6 @@
                 var(--gold);
 
             box-shadow:
-
                 0 18px 40px
                 rgba(
                     98,
@@ -1202,49 +975,39 @@
                     48,
                     0.08
                 );
-
         }
 
-
         .skill-number {
-
             font-family:
-
                 "Playfair Display",
                 serif;
 
-            color: var(--gold);
+            color:
+                var(--gold);
 
             font-style: italic;
 
             font-size: 0.8rem;
 
             margin-bottom: 20px;
-
         }
 
-
         .skill-card h3 {
-
             font-size: 1rem;
 
             font-weight: 500;
 
             margin-bottom: 8px;
-
         }
-
 
         .skill-card p {
-
             font-size: 0.82rem;
 
-            color: var(--light-brown);
+            color:
+                var(--light-brown);
 
             line-height: 1.5;
-
         }
-
 
 
         /* ==================================================
@@ -1252,11 +1015,9 @@
         ================================================== */
 
         .marquee {
-
             overflow: hidden;
 
             border-top:
-
                 1px solid
                 rgba(
                     184,
@@ -1266,7 +1027,6 @@
                 );
 
             border-bottom:
-
                 1px solid
                 rgba(
                     184,
@@ -1275,16 +1035,14 @@
                     0.3
                 );
 
-            padding: 25px 0;
+            padding:
+                25px 0;
 
             background:
                 var(--soft-pink);
-
         }
 
-
         .marquee-track {
-
             width: max-content;
 
             display: flex;
@@ -1292,19 +1050,14 @@
             gap: 35px;
 
             animation:
-
                 marquee
                 20s
                 linear
                 infinite;
-
         }
 
-
         .marquee-track span {
-
             font-family:
-
                 "Playfair Display",
                 serif;
 
@@ -1313,36 +1066,25 @@
             font-style: italic;
 
             white-space: nowrap;
-
         }
-
 
         .marquee-track .dot {
-
-            color: var(--gold);
-
+            color:
+                var(--gold);
         }
-
 
         @keyframes marquee {
 
             from {
-
                 transform:
                     translateX(0);
-
             }
-
 
             to {
-
                 transform:
                     translateX(-50%);
-
             }
-
         }
-
 
 
         /* ==================================================
@@ -1350,20 +1092,15 @@
         ================================================== */
 
         .projects-section {
-
             max-width: 1200px;
 
             margin: auto;
-
         }
 
-
         .project {
-
             display: grid;
 
             grid-template-columns:
-
                 0.8fr
                 2fr
                 0.5fr;
@@ -1374,7 +1111,6 @@
                 35px 10px;
 
             border-top:
-
                 1px solid
                 rgba(
                     184,
@@ -1384,16 +1120,11 @@
                 );
 
             transition:
-
                 all 0.35s ease;
-
         }
 
-
         .project:last-child {
-
             border-bottom:
-
                 1px solid
                 rgba(
                     184,
@@ -1401,14 +1132,10 @@
                     91,
                     0.3
                 );
-
         }
 
-
         .project:hover {
-
             background:
-
                 rgba(
                     247,
                     233,
@@ -1419,33 +1146,25 @@
             padding-left: 25px;
 
             padding-right: 25px;
-
         }
 
-
         .project-number {
-
             font-family:
-
                 "Playfair Display",
                 serif;
 
             font-style: italic;
 
-            color: var(--gold);
-
+            color:
+                var(--gold);
         }
 
-
         .project h3 {
-
             font-family:
-
                 "Playfair Display",
                 serif;
 
             font-size:
-
                 clamp(
                     1.5rem,
                     3vw,
@@ -1453,25 +1172,20 @@
                 );
 
             margin-bottom: 8px;
-
         }
 
-
         .project p {
-
-            color: var(--light-brown);
+            color:
+                var(--light-brown);
 
             font-size: 0.9rem;
 
             line-height: 1.6;
 
             max-width: 650px;
-
         }
 
-
         .project-tags {
-
             margin-top: 14px;
 
             display: flex;
@@ -1479,14 +1193,10 @@
             flex-wrap: wrap;
 
             gap: 7px;
-
         }
 
-
         .tag {
-
             border:
-
                 1px solid
                 rgba(
                     184,
@@ -1497,35 +1207,28 @@
 
             border-radius: 50px;
 
-            padding: 5px 10px;
+            padding:
+                5px 10px;
 
             font-size: 0.68rem;
 
             color:
                 var(--dark-gold);
-
         }
 
-
         .project-arrow {
-
             font-size: 1.8rem;
 
             text-align: right;
 
             transition:
                 transform 0.3s ease;
-
         }
-
 
         .project:hover .project-arrow {
-
             transform:
                 translateX(8px);
-
         }
-
 
 
         /* ==================================================
@@ -1533,25 +1236,19 @@
         ================================================== */
 
         .contact {
-
             text-align: center;
 
             max-width: 900px;
 
             margin: auto;
-
         }
 
-
         .contact h2 {
-
             font-family:
-
                 "Playfair Display",
                 serif;
 
             font-size:
-
                 clamp(
                     3rem,
                     7vw,
@@ -1561,20 +1258,16 @@
             font-weight: 500;
 
             line-height: 1;
-
         }
-
 
         .contact h2 em {
-
-            color: var(--gold);
-
+            color:
+                var(--gold);
         }
 
-
         .contact p {
-
-            color: var(--light-brown);
+            color:
+                var(--light-brown);
 
             margin:
                 25px auto 35px;
@@ -1582,12 +1275,9 @@
             max-width: 550px;
 
             line-height: 1.8;
-
         }
 
-
         .social-links {
-
             display: flex;
 
             justify-content: center;
@@ -1595,9 +1285,7 @@
             flex-wrap: wrap;
 
             gap: 15px;
-
         }
-
 
 
         /* ==================================================
@@ -1605,7 +1293,6 @@
         ================================================== */
 
         footer {
-
             display: flex;
 
             justify-content:
@@ -1613,10 +1300,10 @@
 
             flex-wrap: wrap;
 
-            padding: 30px 7%;
+            padding:
+                30px 7%;
 
             border-top:
-
                 1px solid
                 rgba(
                     184,
@@ -1627,10 +1314,9 @@
 
             font-size: 0.75rem;
 
-            color: var(--light-brown);
-
+            color:
+                var(--light-brown);
         }
-
 
 
         /* ==================================================
@@ -1638,29 +1324,22 @@
         ================================================== */
 
         .reveal {
-
             opacity: 0;
 
             transform:
                 translateY(35px);
 
             transition:
-
                 opacity 0.8s ease,
                 transform 0.8s ease;
-
         }
 
-
         .reveal.active {
-
             opacity: 1;
 
             transform:
                 translateY(0);
-
         }
-
 
 
         /* ==================================================
@@ -1670,25 +1349,15 @@
         @media (max-width: 800px) {
 
             .nav-links {
-
                 display: none;
-
             }
-
 
             .hero {
-
                 padding:
-
-                    115px
-                    6%
-                    80px;
-
+                    115px 6% 80px;
             }
 
-
             .hero h1 {
-
                 letter-spacing: -2px;
 
                 font-size:
@@ -1697,153 +1366,109 @@
                         21vw,
                         6rem
                     );
-
             }
 
-
             .hero-statement {
-
                 font-size: 0.95rem;
 
                 max-width: 85%;
-
             }
 
-
-            .sticker-left {
-
-                width: 105px;
-
-                left: -18px;
-
-                bottom: 9%;
-
-            }
-
-
-            .sticker-right {
-
-                width: 120px;
-
-                right: -22px;
-
-                top: 17%;
-
-            }
-
-
-            .sticker-bottom {
-
+            .sticker-top-left {
                 width: 95px;
 
-                right: 5%;
+                left: -8px;
 
-                bottom: 4%;
-
+                top: 17%;
             }
 
+            .sticker-right {
+                width: 120px;
+
+                right: -18px;
+
+                top: 17%;
+            }
+
+            .sticker-left {
+                width: 125px;
+
+                left: 0;
+
+                bottom: 8%;
+            }
 
             .flower-one {
-
                 font-size: 5rem;
-
             }
-
 
             .flower-two {
+                font-size: 5rem;
 
-                font-size: 4rem;
+                right: 1%;
 
+                bottom: 8%;
             }
-
 
             .flower-three {
-
                 display: none;
-
             }
 
-
             .about {
-
                 grid-template-columns:
                     1fr;
 
                 gap: 40px;
-
             }
 
-
             .about-card {
-
                 border-radius:
-
                     60px
                     15px
                     60px
                     15px;
 
                 padding: 35px;
-
             }
-
 
             .project {
-
                 grid-template-columns:
-
                     40px 1fr;
-
             }
-
 
             .project-arrow {
-
                 display: none;
-
             }
-
 
             footer {
-
                 gap: 15px;
-
             }
-
         }
 
 
-
         /* ==================================================
-           ACCESSIBILITY
-           Stops animation for users who request reduced motion
+           REDUCED MOTION
         ================================================== */
 
         @media (prefers-reduced-motion: reduce) {
 
             * {
-
-                scroll-behavior: auto !important;
-
+                scroll-behavior:
+                    auto !important;
             }
-
 
             .photo-sticker,
             .flower,
             .marquee-track,
             .scroll-indicator::after {
-
-                animation: none !important;
-
+                animation:
+                    none !important;
             }
-
         }
-
 
     </style>
 
 </head>
-
 
 
 <body>
@@ -1855,7 +1480,6 @@
         class="cursor-glow"
         id="cursorGlow"
     ></div>
-
 
 
     <!-- ==================================================
@@ -1871,7 +1495,6 @@
             AB.
         </a>
 
-
         <ul class="nav-links">
 
             <li>
@@ -1880,20 +1503,17 @@
                 </a>
             </li>
 
-
             <li>
                 <a href="#skills">
                     Skills
                 </a>
             </li>
 
-
             <li>
                 <a href="#projects">
                     Projects
                 </a>
             </li>
-
 
             <li>
                 <a href="#contact">
@@ -1906,7 +1526,6 @@
     </nav>
 
 
-
     <!-- ==================================================
          HERO
     ================================================== -->
@@ -1917,7 +1536,7 @@
     >
 
 
-        <!-- decorative flowers -->
+        <!-- FLOWERS -->
 
         <div class="flower flower-one">
             ❀
@@ -1932,87 +1551,49 @@
         </div>
 
 
-
-        <!--
-            PHOTO STICKERS
-
-            princeton = sitting
-            linkedin = red blazer
-            yearbook = graduation
-        -->
-
+        <!-- GRAD PHOTO - TOP LEFT -->
 
         <img
-
-            src="images/princeton.png"
-
-            alt="Portrait of Anika"
-
-            class="
-                photo-sticker
-                sticker-left
-            "
-
-        >
-
-
-
-        <img
-
-            src="images/linkedin.png"
-
-            alt="Portrait of Anika"
-
-            class="
-                photo-sticker
-                sticker-right
-            "
-
-        >
-
-
-
-        <img
-
             src="images/yearbook.png"
-
             alt="Graduation portrait of Anika"
-
-            class="
-                photo-sticker
-                sticker-bottom
-            "
-
+            class="photo-sticker sticker-top-left"
         >
 
+
+        <!-- RED BLAZER - TOP RIGHT -->
+
+        <img
+            src="images/linkedin.png"
+            alt="Portrait of Anika"
+            class="photo-sticker sticker-right"
+        >
+
+
+        <!-- SITTING PHOTO - BOTTOM LEFT -->
+
+        <img
+            src="images/princeton.png"
+            alt="Portrait of Anika"
+            class="photo-sticker sticker-left"
+        >
 
 
         <!-- HERO TEXT -->
 
         <div class="hero-content">
 
-
             <p class="eyebrow">
-
                 Finance • Marketing • Strategy
-
             </p>
 
 
-
             <h1>
-
                 Anika
-
                 <span>
                     Bandwar.
                 </span>
-
             </h1>
 
-
-
-            <!-- PERSONAL STATEMENT -->
 
             <p class="hero-statement">
 
@@ -2030,63 +1611,36 @@
             </p>
 
 
-
             <div class="hero-buttons">
 
-
                 <a
-
                     href="#projects"
-
-                    class="
-                        button
-                        primary-button
-                    "
-
+                    class="button primary-button"
                 >
-
                     Explore My Work
-
                 </a>
-
 
 
                 <a
-
                     href="https://www.linkedin.com/in/anika-bandwar/"
-
                     target="_blank"
-
                     rel="noopener noreferrer"
-
-                    class="
-                        button
-                        secondary-button
-                    "
-
+                    class="button secondary-button"
                 >
-
                     LinkedIn ↗
-
                 </a>
-
 
             </div>
-
 
         </div>
 
 
-
         <div class="scroll-indicator">
-
             Scroll
-
         </div>
 
 
     </section>
-
 
 
     <!-- ==================================================
@@ -2095,20 +1649,13 @@
 
     <section id="about">
 
-
         <div class="about">
-
 
             <div class="reveal">
 
-
                 <p class="section-label">
-
                     01 / About Me
-
                 </p>
-
-
 
                 <p class="big-quote">
 
@@ -2123,21 +1670,14 @@
 
                 </p>
 
-
             </div>
-
 
 
             <div class="about-card reveal">
 
-
                 <h3>
-
                     A little about me.
-
                 </h3>
-
-
 
                 <p>
 
@@ -2150,9 +1690,7 @@
                     it into insights that help people
                     make better decisions.
 
-
                     <br><br>
-
 
                     Whether I'm analyzing data,
                     researching a market, developing a
@@ -2163,15 +1701,11 @@
 
                 </p>
 
-
             </div>
-
 
         </div>
 
-
     </section>
-
 
 
     <!-- ==================================================
@@ -2180,19 +1714,13 @@
 
     <section id="skills">
 
-
         <div class="skills-section">
-
 
             <div class="reveal">
 
-
                 <p class="section-label">
-
                     02 / Skills
-
                 </p>
-
 
                 <h2 class="section-title">
 
@@ -2204,13 +1732,10 @@
 
                 </h2>
 
-
             </div>
 
 
-
             <div class="skills-grid">
-
 
 
                 <div class="skill-card reveal">
@@ -2232,7 +1757,6 @@
                 </div>
 
 
-
                 <div class="skill-card reveal">
 
                     <p class="skill-number">
@@ -2250,7 +1774,6 @@
                     </p>
 
                 </div>
-
 
 
                 <div class="skill-card reveal">
@@ -2271,7 +1794,6 @@
                 </div>
 
 
-
                 <div class="skill-card reveal">
 
                     <p class="skill-number">
@@ -2288,7 +1810,6 @@
                     </p>
 
                 </div>
-
 
 
                 <div class="skill-card reveal">
@@ -2309,7 +1830,6 @@
                 </div>
 
 
-
                 <div class="skill-card reveal">
 
                     <p class="skill-number">
@@ -2326,7 +1846,6 @@
                     </p>
 
                 </div>
-
 
 
                 <div class="skill-card reveal">
@@ -2346,7 +1865,6 @@
                     </p>
 
                 </div>
-
 
 
                 <div class="skill-card reveal">
@@ -2370,12 +1888,9 @@
 
             </div>
 
-
         </div>
 
-
     </section>
-
 
 
     <!-- ==================================================
@@ -2384,10 +1899,8 @@
 
     <div class="marquee">
 
-
         <div class="marquee-track">
 
-
             <span>Finance</span>
             <span class="dot">✦</span>
 
@@ -2403,7 +1916,6 @@
             <span>Creativity</span>
             <span class="dot">✦</span>
 
-
             <span>Finance</span>
             <span class="dot">✦</span>
 
@@ -2418,13 +1930,10 @@
 
             <span>Creativity</span>
             <span class="dot">✦</span>
-
 
         </div>
 
-
     </div>
-
 
 
     <!-- ==================================================
@@ -2433,19 +1942,13 @@
 
     <section id="projects">
 
-
         <div class="projects-section">
-
 
             <div class="reveal">
 
-
                 <p class="section-label">
-
                     03 / Selected Work
-
                 </p>
-
 
                 <h2 class="section-title">
 
@@ -2457,9 +1960,7 @@
 
                 </h2>
 
-
             </div>
-
 
 
             <!-- PROJECT 1 -->
@@ -2469,24 +1970,16 @@
                 class="project reveal"
             >
 
-
                 <div class="project-number">
-
                     01
-
                 </div>
-
 
                 <div>
 
-
                     <h3>
-
                         Global Tuberculosis
                         Data Dashboard
-
                     </h3>
-
 
                     <p>
 
@@ -2499,7 +1992,6 @@
                         insights.
 
                     </p>
-
 
                     <div class="project-tags">
 
@@ -2517,19 +2009,13 @@
 
                     </div>
 
-
                 </div>
-
 
                 <div class="project-arrow">
-
                     ↗
-
                 </div>
 
-
             </a>
-
 
 
             <!-- PROJECT 2 -->
@@ -2539,23 +2025,15 @@
                 class="project reveal"
             >
 
-
                 <div class="project-number">
-
                     02
-
                 </div>
-
 
                 <div>
 
-
                     <h3>
-
                         Harmonia
-
                     </h3>
-
 
                     <p>
 
@@ -2568,7 +2046,6 @@
                         resources.
 
                     </p>
-
 
                     <div class="project-tags">
 
@@ -2590,19 +2067,13 @@
 
                     </div>
 
-
                 </div>
-
 
                 <div class="project-arrow">
-
                     ↗
-
                 </div>
 
-
             </a>
-
 
 
             <!-- PROJECT 3 -->
@@ -2612,24 +2083,16 @@
                 class="project reveal"
             >
 
-
                 <div class="project-number">
-
                     03
-
                 </div>
-
 
                 <div>
 
-
                     <h3>
-
                         Community Volunteer
                         Platform
-
                     </h3>
-
 
                     <p>
 
@@ -2641,7 +2104,6 @@
                         accessible online experience.
 
                     </p>
-
 
                     <div class="project-tags">
 
@@ -2663,25 +2125,18 @@
 
                     </div>
 
-
                 </div>
-
 
                 <div class="project-arrow">
-
                     ↗
-
                 </div>
-
 
             </a>
 
 
         </div>
 
-
     </section>
-
 
 
     <!-- ==================================================
@@ -2690,17 +2145,11 @@
 
     <section id="contact">
 
-
         <div class="contact reveal">
 
-
             <p class="section-label">
-
                 04 / Let's Connect
-
             </p>
-
-
 
             <h2>
 
@@ -2712,8 +2161,6 @@
 
             </h2>
 
-
-
             <p>
 
                 I'm always excited to connect with
@@ -2723,77 +2170,42 @@
 
             </p>
 
-
-
             <div class="social-links">
-
 
                 <!-- CHANGE TO YOUR REAL EMAIL -->
 
                 <a
-
                     href="mailto:YOUR-EMAIL@rutgers.edu"
-
-                    class="
-                        button
-                        primary-button
-                    "
-
+                    class="button primary-button"
                 >
-
                     Email Me
-
                 </a>
-
 
 
                 <a
-
                     href="https://www.linkedin.com/in/anika-bandwar/"
-
                     target="_blank"
-
                     rel="noopener noreferrer"
-
-                    class="
-                        button
-                        secondary-button
-                    "
-
+                    class="button secondary-button"
                 >
-
                     LinkedIn
-
                 </a>
-
 
 
                 <!-- CHANGE TO YOUR GITHUB -->
 
                 <a
-
                     href="#"
-
-                    class="
-                        button
-                        secondary-button
-                    "
-
+                    class="button secondary-button"
                 >
-
                     GitHub
-
                 </a>
-
 
             </div>
 
-
         </div>
 
-
     </section>
-
 
 
     <!-- ==================================================
@@ -2802,23 +2214,15 @@
 
     <footer>
 
-
         <p>
-
             © 2026 Anika Bandwar
-
         </p>
-
 
         <p>
-
             Designed & developed with ♡
-
         </p>
-
 
     </footer>
-
 
 
     <!-- ==================================================
@@ -2827,7 +2231,6 @@
 
     <script>
 
-
         /* CURSOR GLOW */
 
         const cursorGlow =
@@ -2835,50 +2238,38 @@
                 "cursorGlow"
             );
 
-
         document.addEventListener(
             "mousemove",
             (event) => {
 
-
                 cursorGlow.style.left =
                     event.clientX + "px";
 
-
                 cursorGlow.style.top =
                     event.clientY + "px";
-
 
             }
         );
 
 
-
         /* SCROLL REVEAL */
 
         const revealElements =
-
             document.querySelectorAll(
                 ".reveal"
             );
 
-
         const observer =
-
             new IntersectionObserver(
 
                 (entries) => {
 
-
                     entries.forEach(
-
                         (entry) => {
-
 
                             if (
                                 entry.isIntersecting
                             ) {
-
 
                                 entry.target
                                     .classList
@@ -2886,28 +2277,20 @@
                                         "active"
                                     );
 
-
                             }
 
-
                         }
-
                     );
-
 
                 },
 
                 {
-
                     threshold: 0.15
-
                 }
 
             );
 
-
         revealElements.forEach(
-
             (element) => {
 
                 observer.observe(
@@ -2915,9 +2298,7 @@
                 );
 
             }
-
         );
-
 
     </script>
 
